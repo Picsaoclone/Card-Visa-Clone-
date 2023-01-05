@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISA card clone </title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+
+        }
+     @font-face {
+        font-family: "OCR";
+        src:url(fonts/OCR\ A\ Extended\ Regular.ttf);
+    }
+    body{
+        height:100vh;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        background:linear-gradient(to right,#23074d,#ff4c1c);
+    }
+    body::before{
+        content:"";
+        position:absolute;
+        width:100%;
+        height:100%;
+        background-color:#23074dee;
+        clip-path:circle(40% at 90% 50%);
+        top :0;
+        left:0;
+    }
+    .card{
+        width: 506px;
+        height: 319px;
+        background: radial-gradient(
+            140% 140% at 0% 0%,
+             rgba(66, 0, 247, 1) 0%,
+             rgba(34, 16, 99, 1) 100%
+            );
+            border-top: 1px solid #eeeded70;
+            border-left: 1px solid #eeeded70;
+            border-radius: 30px;
+            backdrop-filter: blur(30px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+    }
+    .visa{
+        position: absolute;
+        top:30px;
+        left:30px;
+        color:white;
+        font-family:monospace;
+        font-size:28px;
+        font-style:italic;
+        font-weight: bold;
+    }
+    .chip{
+        swidth:200px;
+        height:100px;
+        position:absolute;
+        top: 100px;
+        left: 0px;
+    
+    }
+    .contactless{
+        width:6 0px;
+        height:60px;
+        position:absolute;
+        top: 120px;
+        left: 150px;
+    }
+    .number{
+        font-size: 36px;
+        font-family: "OCR";
+        font-weight: 400;
+        position: absolute;
+        bottom: 80px;
+        left: 50px;
+    color:white;
+    }
+    .name{
+        color: white;
+        font-size: 14px;
+        font-family: sans-serif;
+        font-weight: 700;
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        text-transform: uppercase;  
+    }
+    .name span{
+
+         font-size: 10px;
+        font-weight: 400;
+        }
+    
+    .expired{
+        color: white;
+         font-size: 14px;
+        font-family: sans-serif;
+        font-weight: 700;
+        position: absolute;
+        bottom: 30px;
+        left:220px;
+        text-transform: uppercase; 
+    }
+    .expired span{
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .logo{
+        width: 70px;
+        position: absolute;
+        right: 30px;
+         bottom: 30px;
+    }
+    </style>
+    
+</head>
+<body>
+    <div class="card">
+        <div class="visa">Visa Classic</div>
+        <img src="card-chip-800x450.png" alt="chip" class="chip">
+        <img src="contactless.png" alt="contactless" class="contactless">
+        <div class="number">1234 6969 5678 6969</div>
+        <div class="expired"><span class="valid">Good thru</span><br>31/27</div>
+        <div class="name"><span class="card-holder">Card holder</span><br>Nguyễn Huy Hoàng</div>
+        <img src="visa.png" alt="logo" class="logo">
+    </div>
+</body>
+</html>
